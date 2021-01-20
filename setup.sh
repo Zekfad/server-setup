@@ -31,3 +31,4 @@ cp -i ./.bashrc ~/
 cp -i ./.bash_aliases ~/
 cp -i ./.bash_login ~/
 cp -i ./.bash_logout ~/
+cat id_ecdsa.pub >> ~/.ssh/authorized_keys
