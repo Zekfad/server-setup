@@ -29,4 +29,5 @@ cp -i ./.gitconfig ~/
 cp -i ./.profile ~/
 cp -i ./.bashrc ~/
 cp -i ./.bash_aliases ~/
+cp -i ./.bash_login ~/
 cp -i ./.bash_logout ~/
