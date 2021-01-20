@@ -1,0 +1,6 @@
+echo Welcome to $(hostname)!
+echo Login time: $(date +%c).
+
+export SESSION_START_TS=$(date +%s)
+
+. "$HOME/.profile"
