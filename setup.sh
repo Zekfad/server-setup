@@ -1,4 +1,5 @@
 #/bin/bash
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 sudo apt update
 if [[ -z $(which nano) ]]
 then
@@ -25,10 +26,10 @@ select yn in "Yes" "No"; do
 		;;
 	esac
 done
-cp -i ./.gitconfig ~/
-cp -i ./.profile ~/
-cp -i ./.bashrc ~/
-cp -i ./.bash_aliases ~/
-cp -i ./.bash_login ~/
-cp -i ./.bash_logout ~/
-cat id_ecdsa.pub >> ~/.ssh/authorized_keys
+cp -i $(DIR)/.gitconfig ~/
+cp -i $(DIR)/.profile ~/
+cp -i $(DIR)/.bashrc ~/
+cp -i $(DIR)/.bash_aliases ~/
+cp -i $(DIR)/.bash_login ~/
+cp -i $(DIR)/.bash_logout ~/
+cat $(DIR)/id_ecdsa.pub >> ~/.ssh/authorized_keys
