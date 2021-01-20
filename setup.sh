@@ -37,3 +37,4 @@ if [[ ! -e ~/.ssh/authorized_keys ]]; then
 	touch ~/.ssh/authorized_keys
 fi
 cat $DIR/id_ecdsa.pub >> ~/.ssh/authorized_keys
+sudo cp -i $DIR/.bashrc /root/
