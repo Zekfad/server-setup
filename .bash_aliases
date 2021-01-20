@@ -1,4 +1,3 @@
-.bash_aliases
 #alias rm='rm -i'
 alias logout="rm -f ~/.bash_history && history -cw && exit"
 alias lls="ls --color=auto -1lpA"
