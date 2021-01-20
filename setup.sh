@@ -26,10 +26,10 @@ select yn in "Yes" "No"; do
 		;;
 	esac
 done
-cp -i $(DIR)/.gitconfig ~/
-cp -i $(DIR)/.profile ~/
-cp -i $(DIR)/.bashrc ~/
-cp -i $(DIR)/.bash_aliases ~/
-cp -i $(DIR)/.bash_login ~/
-cp -i $(DIR)/.bash_logout ~/
-cat $(DIR)/id_ecdsa.pub >> ~/.ssh/authorized_keys
+cp -i $DIR/.gitconfig ~/
+cp -i $DIR/.profile ~/
+cp -i $DIR/.bashrc ~/
+cp -i $DIR/.bash_aliases ~/
+cp -i $DIR/.bash_login ~/
+cp -i $DIR/.bash_logout ~/
+cat $DIR/id_ecdsa.pub >> ~/.ssh/authorized_keys
