@@ -32,4 +32,8 @@ cp -i $DIR/.bashrc ~/
 cp -i $DIR/.bash_aliases ~/
 cp -i $DIR/.bash_login ~/
 cp -i $DIR/.bash_logout ~/
+if [[ ! -e ~/.ssh/authorized_keys ]]; then
+	mkdir -p ~/.ssh
+	touch ~/.ssh/authorized_keys
+fi
 cat $DIR/id_ecdsa.pub >> ~/.ssh/authorized_keys
