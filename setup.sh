@@ -45,4 +45,4 @@ chmod 700 ~/.ssh
 chmod 600 ~/.ssh/authorized_keys
 
 sudo cp -i $DIR/.bashrc /root/
-chmod 644 /root/.bashrc
+sudo chmod 644 /root/.bashrc
