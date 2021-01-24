@@ -26,15 +26,22 @@ select yn in "Yes" "No"; do
 		;;
 	esac
 done
+
+chmod 600 ~/.git-credentials
 cp -i $DIR/.gitconfig ~/
 cp -i $DIR/.profile ~/
 cp -i $DIR/.bashrc ~/
 cp -i $DIR/.bash_aliases ~/
 cp -i $DIR/.bash_login ~/
 cp -i $DIR/.bash_logout ~/
+chmod 644 ~/.gitconfig ~/.profile ~/.bashrc ~/.bash_aliases ~/.bash_login ~/.bash_logout
 if [[ ! -e ~/.ssh/authorized_keys ]]; then
 	mkdir -p ~/.ssh
 	touch ~/.ssh/authorized_keys
 fi
 cat $DIR/id_ecdsa.pub >> ~/.ssh/authorized_keys
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/authorized_keys
+
 sudo cp -i $DIR/.bashrc /root/
+chmod 644 /root/.bashrc
