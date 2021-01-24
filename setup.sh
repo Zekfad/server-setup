@@ -5,6 +5,7 @@ if [[ -z $(which nano) ]]
 then
 	sudo apt install -y nano
 fi
+sudo apt install -y ifupdown iputils-ping cron
 hostname_orig=$(cat /etc/hostname)
 echo Current hostname: $hostname_orig
 echo Do you want to chnage it?
