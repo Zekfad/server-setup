@@ -1,5 +1,8 @@
 [user]
 	name = Yaroslav Vorobev
 	email = zekfad@znnme.eu.org
+	signkey = C164804976DB9411
 [credential]
 	helper = !pass-git-helper $@
+[commit]
+	gpgsign = true

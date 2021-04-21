@@ -64,6 +64,6 @@ sudo chmod 644 /root/.bashrc ~/.bash_aliases
 echo Remember to setup GPG Agent forwarding: https://wiki.gnupg.org/AgentForwarding
 
 if [[ ! -e ~/.password-store/dev/github ]]; then
-	pass init dev
+	pass init 0xC164804976DB9411
 	pass insert dev/github
 fi
