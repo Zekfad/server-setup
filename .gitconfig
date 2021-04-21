@@ -2,4 +2,4 @@
 	name = Yaroslav Vorobev
 	email = zekfad@znnme.eu.org
 [credential]
-	helper = store
+	helper = !pass-git-helper $@
