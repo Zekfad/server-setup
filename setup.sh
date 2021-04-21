@@ -6,7 +6,7 @@ if [[ -z $(which nano) ]]; then
 	sudo apt install -y nano
 fi
 
-sudo apt install -y ifupdown iputils-ping cron gnupg
+sudo apt install -y ifupdown iputils-ping cron gnupg pass pass-git-helper
 
 hostname_orig=$(cat /etc/hostname)
 echo Current hostname: $hostname_orig
@@ -53,3 +53,9 @@ chmod 600 ~/.ssh/authorized_keys
 sudo cp -i $DIR/.bashrc /root/
 sudo cp -i $DIR/.bash_aliases /root/
 sudo chmod 644 /root/.bashrc ~/.bash_aliases
+
+if [[ ! -e ~/.password-store/dev/github ]]; then
+	pass insert dev/github
+fi
+
+echo Remember to setup GPG Agent forwarding: https://wiki.gnupg.org/AgentForwarding
