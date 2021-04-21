@@ -6,7 +6,7 @@ if [[ -z $(which nano) ]]; then
 	sudo apt install -y nano
 fi
 
-sudo apt install -y ifupdown iputils-ping cron
+sudo apt install -y ifupdown iputils-ping cron gnupg
 
 hostname_orig=$(cat /etc/hostname)
 echo Current hostname: $hostname_orig
