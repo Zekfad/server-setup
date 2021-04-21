@@ -1,7 +1,7 @@
 [user]
 	name = Yaroslav Vorobev
 	email = zekfad@znnme.eu.org
-	signkey = C164804976DB9411
+	signingKey = C164804976DB9411
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
