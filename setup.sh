@@ -34,6 +34,13 @@ if [[ -e ~/.git-credentials ]]; then
 	chmod 600 ~/.git-credentials
 fi
 
+if [[ ! -e ~/.config/pass-git-helper/git-pass-mapping.ini ]]; then
+	mkdir -p ~/.config/pass-git-helper
+fi
+
+cp -i $DIR/.config/pass-git-helper/git-pass-mapping.ini ~/.config/pass-git-helper/
+chmod -R 700 ~/.config
+
 cp -i $DIR/.gitconfig ~/
 cp -i $DIR/.profile ~/
 cp -i $DIR/.bashrc ~/
@@ -48,14 +55,15 @@ if [[ ! -e ~/.ssh/authorized_keys ]]; then
 fi
 chmod 700 ~/.ssh
 cat $DIR/id_ecdsa.pub >> ~/.ssh/authorized_keys
-chmod 600 ~/.ssh/authorized_keys
+chmod 600 ~/.ssh/authorized_keys ~/.config/pass-git-helper/git-pass-mapping.ini
 
 sudo cp -i $DIR/.bashrc /root/
 sudo cp -i $DIR/.bash_aliases /root/
 sudo chmod 644 /root/.bashrc ~/.bash_aliases
 
+echo Remember to setup GPG Agent forwarding: https://wiki.gnupg.org/AgentForwarding
+
 if [[ ! -e ~/.password-store/dev/github ]]; then
+	pass init dev
 	pass insert dev/github
 fi
-
-echo Remember to setup GPG Agent forwarding: https://wiki.gnupg.org/AgentForwarding
