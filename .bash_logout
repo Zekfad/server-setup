@@ -5,6 +5,7 @@
 if [ "$SHLVL" = 1 ]; then
 	[ -x /usr/bin/clear_console ] && /usr/bin/clear_console -q
 fi
+gpg-connect-agent reloadagent /bye
 
 echo Goodbye.
 echo Logout time: $(date +%c).
