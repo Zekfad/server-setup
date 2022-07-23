@@ -6,7 +6,7 @@ if [[ -z $(which nano) ]]; then
 	sudo apt install -y nano
 fi
 
-sudo apt install -y ifupdown iputils-ping cron gnupg pass pass-git-helper
+sudo apt install -y ifupdown iputils-ping cron gnupg pass pass-git-helper tmux
 
 hostname_orig=$(cat /etc/hostname)
 echo Current hostname: $hostname_orig
