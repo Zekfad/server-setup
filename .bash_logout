@@ -9,11 +9,3 @@ gpg-connect-agent reloadagent /bye
 
 echo Goodbye.
 echo Logout time: $(date +%c).
-
-if [ ! "$SESSION_START_TS" -gt "0" ]; then
-	SESSION_START_TS=$(date +%s)
-fi
-
-SESSION_DURATION=$(($(date +%s)-$SESSION_START_TS))
-
-echo Session duration: $(date -u -d @${SESSION_DURATION} +%T)

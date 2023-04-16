@@ -1,17 +1,17 @@
-alias lls="ls --color=auto -1lpA"
+# ls aliases
+alias lls='ls --color=auto -1lpA'
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-alias leave="rm -f ~/.bash_history && history -cw && exit"
+# leave and clear logs
+alias leave='rm -f ~/.bash_history && history -cw && exit'
 
-#alias rm='rm -i'
+# alias rm='rm -i'
 
-alias cls="clear"
-
-alias cd..="cd .."
-
-alias n3="nnn -oHdU"
+# Windows-like aliases
+alias cls='clear'
+alias cd..='cd ..'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
