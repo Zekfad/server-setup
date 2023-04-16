@@ -9,7 +9,7 @@ if [[ -z $(which nano) ]]; then
 fi
 
 # Intall basic utils
-sudo apt install -y iputils-ping cron gnupg pass pass-git-helper
+sudo apt install -y iputils-ping cron gnupg pass pass-git-helper tmux
 
 current_hostname=$(cat /etc/hostname)
 echo Current hostname: $current_hostname
